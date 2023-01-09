@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sand - Landing page</title>
+    </head> 
+    <body>
+        <header class="showcase">
+            <div class="showcase-top">
+                <!-- Sand logo -->
+                <!-- <img src="https://bit.ly/SandLogo" alt=""> -->
+                <img src="{{url_for('static', filename='Sand.png')}}" alt="">
+                <!-- Link to sign in page -->
+                <a href="{{ url_for('login') }}" class="btn btn-rounded">Sign In</a>
+            </div>
+            <div class="showcase-content">
+                <h1>Watch your favorite Movies, TV Shows and more!</h1>
+                <p>Ready to watch? Login if you already have an account, else sign up.</p>
+                <!-- Link to get started page or sign up page -->
+                <a href="{{ url_for('signup') }}" class="btn btn-lg">GET STARTED</a>
+            </div>
+        </header>
+            
+        <footer class="footer">
+            <p>Any questions? Reach out to us at,</p>
+
+            <div class="footer-1">
+                <p>Sadhana</p>
+                <div class="footer-insta">
+                    <a href="https://instagram.com/Sadhanaaaaaaaaa">
+                        <img src="{{url_for('static', filename='Insta.png')}}" alt="">
+                    </a>
+                </div>
+                <div class="footer-linkedin">
+                    <a href="https://www.linkedin.com/in/sadhana-parameswaran-0822041ba/">
+                        <img src="{{url_for('static', filename='LinkedIn.png')}}" alt="">
+                    </a>
+                </div>
+                <div class="footer-github">
+                    <a href="https://github.com/SadhanaParameswaran">
+                        <img src="{{url_for('static', filename='GitHub.png')}}" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-2">
+                <p>Nandhitha</p>
+                <div class="footer2-insta">
+                    <a href="https://www.instagram.com/nandu.14/">
+                        <img src="{{url_for('static', filename='Insta.png')}}" alt="">
+                    </a>
+                </div>
+                <div class="footer2-linkedin">
+                    <a href="https://www.linkedin.com/in/nandhitha-ravishankar-b86ab4204/">
+                        <img src="{{url_for('static', filename='LinkedIn.png')}}" alt="">
+                    </a>
+                </div>
+                <div class="footer2-github">
+                    <a href="https://github.com/Nandhitha-Ravishankar">
+                        <img src="{{url_for('static', filename='GitHub.png')}}" alt="">
+                    </a>
+                </div>
+            </div>
+
+        </footer>
+
+        <style>
+            :root
+            {
+                /*--primary-color: #311432;*/
+                --primary-color: #8D4585;
+                --dark-color: #141414;
+                --light-color: black;
+            }
+            *
+            {
+                margin: 0;
+                padding: 0;
+            }
+            body
+            {
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                background: #ADD8E6;
+                color: #ADD8E6;
+                margin: 0 auto;
+            }
+            h1
+            {
+                color: black;
+                height: fit-content;
+            }
+            div 
+            {
+                white-space: normal;
+                height: fit-content;
+            }
+            p
+            {
+                margin: 1rem 0;
+                font-weight: bold;
+                color: black;
+                height: fit-content;
+            }
+            img
+            {
+                width: 100%;
+            }
+            .showcase
+            {
+                width: 100%;
+                height: 100vh;
+                position: relative;
+            }
+            /* login page */
+            .showcase::after
+            {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                background: #ADD8E6;
+                box-shadow: -10px 10px 120px #000000 , 
+                inset -100px -60px 200px #000000;
+            }
+            /* sand and sign in space */
+            .showcase-top
+            {
+                position: relative;
+                z-index: 2;
+                height: 50px;
+            }
+            /* sand logo */
+            .showcase-top img
+            {
+                width: 140px;
+                position: fixed;
+                top: 50%;
+                left: 0;
+                transform: translate(20%, -450%);
+                cursor: pointer;
+            }
+            /* Sign in */
+            .showcase-top a
+            {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translate(-60% , -50%);
+            }
+            .showcase-content
+            {
+                position: relative;
+                margin: 0 26%;
+                z-index: 2;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+                margin-top: 9rem;
+            }
+            .showcase-content h1
+            {
+                font-weight: 700;
+                font-size: 64px;
+                margin: 0 30px;
+                width: 800px;
+                line-height: 74.5px;
+            }
+            .showcase-content h3
+            {
+                color: white;
+                font-size: 25px;
+                margin: 16px 0;
+            }
+            .showcase-content p
+            {
+                font-size: 19.2px;
+                font-weight: 300;
+                padding-top: 0.5rem;
+                padding-bottom: 1rem;
+            }
+            .showcase-content input
+            {
+                position: absolute;
+                left: 0;
+                bottom: -8vh;
+                width: 454px;
+                height: 3rem;
+                font-size: 1rem;
+                padding-left: 0.5rem;
+            }
+            /*button */
+            .btn
+            {
+                display: inline-block;
+                background: var(--primary-color);
+                color: white;
+                padding: 0.5rem 1.2rem;
+                font-size: 1rem;
+                text-align: center;
+                border: none;
+                cursor: pointer;
+                border-radius: 2px;
+                margin-right: 0.5rem;
+                outline: none;
+                box-shadow: 0 2px 2px black;
+            }
+            .btn:hover
+            {
+                opacity: 0.5;
+            }
+            .btn-rounded
+            {
+                border-radius: 5px;
+            }
+            /*Get started button*/
+            .showcase-content .btn-lg
+            {
+                position: absolute;
+                right: 9;
+                bottom: -8vh;
+                padding: 0.5rem 1.2rem;
+                font-size: 1.5rem;
+                text-transform: uppercase;
+                height: 36px;
+                width: 14rem;
+            }
+            /* space between previous page and footer page*/
+            .footer
+            {
+                width: 50%;
+                margin: 1rem auto;
+                text-align: center;
+                color: pink;
+            }
+            /* space between any questions and the contact details */
+            .footer p
+            {
+                margin-bottom: 1rem;
+                size: 10px;
+                width: 40%;
+                color: black;
+            }
+            /* footer 1 */
+            .footer .footer-1
+            {
+                display: grid;
+                grid-template-columns: repeat(4 , 1fr);
+                grid-gap: 8rem;
+                text-align: justify;
+                color: pink;
+            }
+            /* Insta pic */
+            .footer-insta img
+            {
+                width: 50px;
+                position: relative;
+                transform: translate(-480% , 100%);
+                cursor: pointer;
+            }
+            .footer-insta:hover{
+                opacity: 0.5;
+            }
+            /* LinkedIn pic */
+            .footer-linkedin img
+            {
+                width: 50px;
+                position: relative;
+                transform: translate(-750% , 120%);
+                cursor: pointer;
+            }
+            .footer-linkedin:hover
+            {
+                opacity: 0.5;
+            }
+            /* Github pic */
+            .footer-github img
+            {
+                width: 50px;
+                position: relative;
+                transform: translate(-1020% , 100%);
+                cursor: pointer;
+            }
+            .footer-github:hover
+            {
+                opacity: 0.5;
+            }
+            /* footer 2 */
+            .footer .footer-2
+            {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                transform: translate(40% , -100%);
+                grid-gap: 8.8rem;
+                text-align: justify;
+                color: pink;
+            }
+            /* Insta pic */
+            .footer2-insta img
+            {
+                width: 50px;
+                position: relative;
+                transform: translate(-500% , 100%);
+                cursor: pointer;
+            }
+            .footer2-insta:hover
+            {
+                opacity: 0.5;
+            }
+            /* LinkedIn pic */
+            .footer2-linkedin img
+            {
+                width: 50px;
+                position: relative;
+                transform: translate(-775% , 120%);
+                cursor: pointer;
+            }
+            .footer2-linkedin:hover
+            {
+                opacity: 0.5;
+            }
+            /* Github pic */
+            .footer2-github img
+            {
+                width: 50px;
+                position: relative;
+                transform: translate(-1050% , 100%);
+                cursor: pointer;
+            }
+            .footer2-github:hover
+            {
+                opacity: 0.5;
+            }
+        </style>
+    </body>
+</html>
