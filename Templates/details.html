@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Account Details</title>
+        <style>
+            h1 
+            {
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                font-size: 4rem;
+                color: black;
+            }
+
+            *
+            {
+                background: #ADD8E6;
+            }
+
+            .body
+            {
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            }
+
+            .text-block .text1
+            {
+                display: flow-root;
+                grid-gap: 8rem;
+                color: purple;
+                font-size: 2.0em;
+            }
+        </style>
+        <body>
+            <h1>Account Details</h1>
+            <div class = "text-block">
+                <h3 class = "text1" > Customer ID: {{ user.custID }} </h3>
+                <h3 class = "text1" > DOB: {{ user.dob }} </h3>
+                <h3 class = "text1" > First Name: {{ user.firstName }} </h3>
+                <h3 class = "text1" > Last Name: {{ user.lastName }} </h3>
+                <h3 class = "text1" > Address: {{ user.address }} </h3>
+                <h3 class = "text1" > Phone no: {{ user.phoneNo }} </h3>
+                <h3 class = "text1" > Email: {{ user.email }} </h3>
+            </div>
+        </body>
+    </head>
+</html>
